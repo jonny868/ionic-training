@@ -1,0 +1,6 @@
+{
+	"appId": "com.jpapp.app",
+	"appName": "Ionic-project",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

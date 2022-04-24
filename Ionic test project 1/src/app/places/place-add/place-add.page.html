@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="places"></ion-back-button>
+    </ion-buttons>
+    <ion-title>New Place</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-row>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>New Place</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-input type="text" placeholder="Roma" #title></ion-input>
+          <ion-input type="text" placeholder="https://imageurl.com"#imageURL></ion-input>
+          <ion-button (click)="newPlace(title, imageURL)" expand="block" fill="clear" shape="round">
+            Add
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>
