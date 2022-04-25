@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>posts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let post of posts.data">
+    <ion-card-header>
+      <ion-card-title>{{post.attributes.title}}</ion-card-title>
+      <ion-card-subtitle>{{post.attributes.subtitle}}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <img
+      src="http://localhost:1337{{post.attributes.image.data.attributes.formats.small.url}}"
+      onerror="this.src='https://img.icons8.com/windows/344/no-image.png'"
+       alt="No image detected"/>
+
+      <!-- <img data-src="http://localhost:1337{{post.attributes.image.data.attributes.formats.small.url}}" alt="asdasd"> -->
+
+      {{post.attributes.description}}
+      <div>
+        <ion-button shape="round"> Click me </ion-button>
+        <ion-button shape="round"> Click me </ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="danger" routerLink="/post-form">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
